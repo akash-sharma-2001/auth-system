@@ -10,7 +10,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 connectDB();
 
-const allowedOrigins = ['http://10.62.212.93:5173', 'http://localhost:5173']
+const allowedOrigins = [process.env.Frontend_URL_LOCAL, process.env.Frontend_URL_PRODUCTION]
 
 // Middleware
 app.use(express.json())
